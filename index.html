@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 2.1: Letter to Your Parents</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+        }
+
+        /* Grammar Highlighting Custom Classes */
+        .highlight-aff {
+            background-color: #dcfce7 !important;
+            color: #15803d !important;
+            border-bottom: 2px solid #22c55e;
+            padding: 2px 4px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .highlight-neg {
+            background-color: #ffe4e6 !important;
+            color: #be123c !important;
+            border-bottom: 2px solid #f43f5e;
+            padding: 2px 4px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .highlight-int {
+            background-color: #e0f2fe !important;
+            color: #0369a1 !important;
+            border-bottom: 2px solid #0284c7;
+            padding: 2px 4px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .highlight-participle {
+            font-weight: 700 !important;
+            text-decoration: underline !important;
+            text-decoration-color: #8b5cf6 !important;
+            text-decoration-thickness: 2px !important;
+        }
+
+        /* Flashcard Flip Animation */
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+
+        .transform-style-3d {
+            transform-style: preserve-3d;
+            transition: transform 0.6s ease;
+        }
+
+        .flipped {
+            transform: rotateY(180deg);
+        }
+
+        .backface-hidden {
+            backface-visibility: hidden;
+        }
+
+        .rotate-y-180 {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8 min-h-screen">
+
+    <!-- MAIN CONTAINER -->
+    <div class="max-w-4xl mx-auto space-y-8">
+
+        <!-- HEADER SECTION -->
+        <header class="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-2xl p-6 md:p-8 text-white shadow-xl">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                    <span class="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-semibold uppercase tracking-wider mb-2">
+                        A2 English Reading & Grammar Lab
+                    </span>
+                    <h1 class="text-3xl md:text-4xl font-bold">Activity 2.1: Letter to Your Parents</h1>
+                    <p class="text-blue-100 mt-1 text-sm md:text-base">Mastering the Present Perfect Tense through Guided Reading</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 text-xs md:text-sm max-w-xs">
+                    <p class="font-semibold mb-1 flex items-center gap-1.5">
+                        <svg class="w-4 h-4 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        Learning Objectives
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 text-blue-50">
+                        <li>Identify Present Perfect sentences</li>
+                        <li>Learn basic past participles</li>
+                        <li>Understand key details in a letter</li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- STAGE 1: PRE-READING -->
+        <section class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 font-bold flex items-center justify-center text-sm">1</span>
+                <div>
+                    <h2 class="text-xl font-bold text-slate-800">Stage 1: Pre-Reading</h2>
+                    <p class="text-xs text-slate-500">Prepare your mind before reading the text</p>
+                </div>
+            </div>
+
+            <!-- Warm-up Questions -->
+            <div class="mb-6">
+                <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-400 mb-3">Warm-Up Discussion</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-amber-50/60 border border-amber-200/60 rounded-xl p-4 flex items-start gap-3">
+                        <div class="p-2 bg-amber-100 rounded-lg text-amber-700 text-xl">✉️</div>
+                        <div>
+                            <h4 class="font-semibold text-amber-900 text-sm">Question 1</h4>
+                            <p class="text-amber-800 text-sm mt-0.5">Do you write letters, messages, or emails to your family when you travel?</p>
+                        </div>
+                    </div>
+                    <div class="bg-emerald-50/60 border border-emerald-200/60 rounded-xl p-4 flex items-start gap-3">
+                        <div class="p-2 bg-emerald-100 rounded-lg text-emerald-700 text-xl">🏙️</div>
+                        <div>
+                            <h4 class="font-semibold text-emerald-900 text-sm">Question 2</h4>
+                            <p class="text-emerald-800 text-sm mt-0.5">When you live in a new city, what news do you share with your parents?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Flashcards -->
+            <div>
+                <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-400 mb-3">Key Vocabulary (Click cards to flip)</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3" id="flashcard-container">
+                    <!-- Cards will be populated dynamically by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- STAGE 2: WHILE-READING -->
+        <section class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 font-bold flex items-center justify-center text-sm">2</span>
+                <div>
+                    <h2 class="text-xl font-bold text-slate-800">Stage 2: While-Reading</h2>
+                    <p class="text-xs text-slate-500">Read Alex's letter and explore the Present Perfect structure</p>
+                </div>
+            </div>
+
+            <!-- Grammar Control Toggle Buttons -->
+            <div class="bg-slate-50 p-3 rounded-xl mb-6 border border-slate-200/60 flex flex-wrap gap-2 items-center justify-between">
+                <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Grammar Cues:</span>
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="toggleGrammar('aff')" id="btn-aff" class="px-3 py-1.5 rounded-lg text-xs font-medium border border-emerald-300 bg-white text-emerald-700 hover:bg-emerald-50 transition">
+                        🟢 Affirmative
+                    </button>
+                    <button onclick="toggleGrammar('neg')" id="btn-neg" class="px-3 py-1.5 rounded-lg text-xs font-medium border border-rose-300 bg-white text-rose-700 hover:bg-rose-50 transition">
+                        🔴 Negative
+                    </button>
+                    <button onclick="toggleGrammar('int')" id="btn-int" class="px-3 py-1.5 rounded-lg text-xs font-medium border border-sky-300 bg-white text-sky-700 hover:bg-sky-50 transition">
+                        🔵 Questions
+                    </button>
+                    <button onclick="toggleGrammar('participle')" id="btn-participle" class="px-3 py-1.5 rounded-lg text-xs font-medium border border-purple-300 bg-white text-purple-700 hover:bg-purple-50 transition">
+                        ✨ Past Participles
+                    </button>
+                    <button onclick="clearGrammar()" class="px-3 py-1.5 rounded-lg text-xs font-medium border border-slate-300 bg-slate-200 text-slate-700 hover:bg-slate-300 transition">
+                        Reset
+                    </button>
+                </div>
+            </div>
+
+            <!-- Letter Container -->
+            <div class="bg-amber-50/30 border border-amber-200/60 rounded-2xl p-6 md:p-8 font-serif leading-relaxed text-slate-700 text-base md:text-lg shadow-inner relative">
+                <div class="absolute top-4 right-4 text-xs font-sans text-amber-700 bg-amber-100/80 px-2.5 py-1 rounded-full border border-amber-200">
+                    📍 London, UK
+                </div>
+
+                <p class="mb-4 font-sans text-sm text-slate-500">October 24, 2026</p>
+                <p class="mb-4 font-bold text-slate-800">Dear Mom and Dad,</p>
+
+                <p class="mb-4">
+                    I hope you are doing well! I <span class="grammar aff"><span class="participle">have moved</span></span> into my new <span class="font-sans font-semibold text-indigo-600 bg-indigo-50 px-1 rounded">apartment</span> in London, and everything is very exciting. I <span class="grammar aff"><span class="participle">have lived</span></span> here for two weeks now. My new <span class="font-sans font-semibold text-indigo-600 bg-indigo-50 px-1 rounded">roommate</span> is friendly, and we <span class="grammar aff"><span class="participle">have visited</span></span> three interesting <span class="font-sans font-semibold text-indigo-600 bg-indigo-50 px-1 rounded">museums</span> in our <span class="font-sans font-semibold text-indigo-600 bg-indigo-50 px-1 rounded">neighborhood</span>.
+                </p>
+
+                <p class="mb-4">
+                    However, life in a big city is busy. I <span class="grammar neg"><span class="participle">haven't found</span></span> a full-time job yet, but I <span class="grammar aff"><span class="participle">have sent</span></span> my resume to five companies. Also, I <span class="grammar neg"><span class="participle">haven't bought</span></span> a bicycle because transport is easy here.
+                </p>
+
+                <p class="mb-4">
+                    <span class="grammar int">Have you <span class="participle">received</span> the photos</span> I sent yesterday? <span class="grammar int">Has Dad <span class="participle">fixed</span> his car</span> yet? I really miss you both!
+                </p>
+
+                <p class="mt-6">With lots of love,</p>
+                <p class="font-bold text-indigo-700">Alex</p>
+            </div>
+        </section>
+
+        <!-- STAGE 3: POST-READING -->
+        <section class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 space-y-6">
+            <div class="flex items-center gap-3 mb-2">
+                <span class="w-8 h-8 rounded-full bg-purple-100 text-purple-600 font-bold flex items-center justify-center text-sm">3</span>
+                <div>
+                    <h2 class="text-xl font-bold text-slate-800">Stage 3: Post-Reading & Practice</h2>
+                    <p class="text-xs text-slate-500">Check your understanding and grammar skills</p>
+                </div>
+            </div>
+
+            <!-- Part A: Key Details Checklist -->
+            <div class="bg-slate-50 p-5 rounded-xl border border-slate-200/60">
+                <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-600 mb-3 flex items-center gap-2">
+                    <span>📋</span> Part A: Main Events Checklist
+                </h3>
+                <p class="text-xs text-slate-500 mb-3">Check the boxes as you verify what Alex has done in London:</p>
+                <div class="space-y-2">
+                    <label class="flex items-center gap-3 bg-white p-3 rounded-lg border border-slate-200 cursor-pointer hover:bg-slate-50 transition">
+                        <input type="checkbox" class="w-4 h-4 text-indigo-600 rounded focus:ring-indigo-500">
+                        <span class="text-sm text-slate-700">Alex has moved to a new apartment in London.</span>
+                    </label>
+                    <label class="flex items-center gap-3 bg-white p-3 rounded-lg border border-slate-200 cursor-pointer hover:bg-slate-50 transition">
+                        <input type="checkbox" class="w-4 h-4 text-indigo-600 rounded focus:ring-indigo-500">
+                        <span class="text-sm text-slate-700">Alex has visited three museums with their roommate.</span>
+                    </label>
+                    <label class="flex items-center gap-3 bg-white p-3 rounded-lg border border-slate-200 cursor-pointer hover:bg-slate-50 transition">
+                        <input type="checkbox" class="w-4 h-4 text-indigo-600 rounded focus:ring-indigo-500">
+                        <span class="text-sm text-slate-700">Alex hasn't found a job yet, but sent resumes.</span>
+                    </label>
+                    <label class="flex items-center gap-3 bg-white p-3 rounded-lg border border-slate-200 cursor-pointer hover:bg-slate-50 transition">
+                        <input type="checkbox" class="w-4 h-4 text-indigo-600 rounded focus:ring-indigo-500">
+                        <span class="text-sm text-slate-700">Alex sent photos to their parents yesterday.</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Part B: Interactive Quiz -->
+            <div class="bg-slate-50 p-5 rounded-xl border border-slate-200/60 space-y-6">
+                <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-600 flex items-center gap-2">
+                    <span>🧩</span> Part B: Comprehension & Grammar Quiz
+                </h3>
+
+                <!-- Multiple Choice 1 -->
+                <div class="quiz-card bg-white p-4 rounded-xl border border-slate-200" id="q1-card">
+                    <p class="font-medium text-slate-800 text-sm mb-3">1. How long has Alex lived in London?</p>
+                    <div class="space-y-2">
+                        <label class="flex items-center gap-2 text-sm text-slate-600 cursor-pointer">
+                            <input type="radio" name="q1" value="a" class="text-indigo-600"> A) For two days
+                        </label>
+                        <label class="flex items-center gap-2 text-sm text-slate-600 cursor-pointer">
+                            <input type="radio" name="q1" value="b" class="text-indigo-600"> B) For two weeks
+                        </label>
+                        <label class="flex items-center gap-2 text-sm text-slate-600 cursor-pointer">
+                            <input type="radio" name="q1" value="c" class="text-indigo-600"> C) For two months
+                        </label>
+                    </div>
+                    <p class="feedback hidden mt-2 text-xs font-semibold"></p>
+                </div>
+
+                <!-- Multiple Choice 2 -->
+                <div class="quiz-card bg-white p-4 rounded-xl border border-slate-200" id="q2-card">
+                    <p class="font-medium text-slate-800 text-sm mb-3">2. Which statement is NEGATIVE in the text?</p>
+                    <div class="space-y-2">
+                        <label class="flex items-center gap-2 text-sm text-slate-600 cursor-pointer">
+                            <input type="radio" name="q2" value="a" class="text-indigo-600"> A) Alex has moved into a new apartment.
+                        </label>
+                        <label class="flex items-center gap-2 text-sm text-slate-600 cursor-pointer">
+                            <input type="radio" name="q2" value="b" class="text-indigo-600"> B) Alex has sent my resume to five companies.
+                        </label>
+                        <label class="flex items-center gap-2 text-sm text-slate-600 cursor-pointer">
+                            <input type="radio" name="q2" value="c" class="text-indigo-600"> C) Alex haven't bought a bicycle.
+                        </label>
+                    </div>
+                    <p class="feedback hidden mt-2 text-xs font-semibold"></p>
+                </div>
+
+                <!-- Multiple Choice 3 -->
+                <div class="quiz-card bg-white p-4 rounded-xl border border-slate-200" id="q3-card">
+                    <p class="font-medium text-slate-800 text-sm mb-3">3. What question does Alex ask their parents?</p>
+                    <div class="space-y-2">
+                        <label class="flex items-center gap-2 text-sm text-slate-600 cursor-pointer">
+                            <input type="radio" name="q3" value="a" class="text-indigo-600"> A) "Have you received the photos?"
+                        </label>
+                        <label class="flex items-center gap-2 text-sm text-slate-600 cursor-pointer">
+                            <input type="radio" name="q3" value="b" class="text-indigo-600"> B) "Have you bought a bicycle?"
+                        </label>
+                        <label class="flex items-center gap-2 text-sm text-slate-600 cursor-pointer">
+                            <input type="radio" name="q3" value="c" class="text-indigo-600"> C) "Have you visited London?"
+                        </label>
+                    </div>
+                    <p class="feedback hidden mt-2 text-xs font-semibold"></p>
+                </div>
+
+                <!-- Fill-in-the-blank 1 -->
+                <div class="quiz-card bg-white p-4 rounded-xl border border-slate-200" id="q4-card">
+                    <p class="font-medium text-slate-800 text-sm mb-3">
+                        4. Complete with the Past Participle: "Alex has <span class="font-mono text-purple-600 font-bold">[visit]</span> _______ three museums."
+                    </p>
+                    <input type="text" id="q4-input" placeholder="Type past participle..." class="w-full sm:w-64 p-2 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+                    <p class="feedback hidden mt-2 text-xs font-semibold"></p>
+                </div>
+
+                <!-- Fill-in-the-blank 2 -->
+                <div class="quiz-card bg-white p-4 rounded-xl border border-slate-200" id="q5-card">
+                    <p class="font-medium text-slate-800 text-sm mb-3">
+                        5. Complete with the Past Participle: "Alex hasn't <span class="font-mono text-purple-600 font-bold">[find]</span> _______ a full-time job yet."
+                    </p>
+                    <input type="text" id="q5-input" placeholder="Type past participle..." class="w-full sm:w-64 p-2 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+                    <p class="feedback hidden mt-2 text-xs font-semibold"></p>
+                </div>
+
+                <!-- Action Button & Score Display -->
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+                    <button onclick="checkQuizAnswers()" class="w-full sm:w-auto px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl shadow-md transition transform active:scale-95">
+                        Submit Quiz Answers
+                    </button>
+                    <div id="score-display" class="hidden text-sm font-bold px-4 py-2 bg-indigo-100 text-indigo-800 rounded-xl border border-indigo-200">
+                        Score: 0 / 5
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STAGE 4: TEACHER ORAL ASSESSMENT PANEL -->
+        <section class="bg-gradient-to-br from-slate-900 to-indigo-950 rounded-2xl p-6 text-white shadow-xl border border-slate-800">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="px-3 py-1 bg-amber-400 text-slate-900 font-bold rounded-lg text-xs uppercase tracking-wider">
+                    Teacher's Zone
+                </span>
+                <h2 class="text-xl font-bold">Stage 4: Live Oral Assessment</h2>
+            </div>
+            <p class="text-xs text-slate-400 mb-6">Ask these questions aloud in the virtual class to test student speaking and comprehension:</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+                    <span class="text-amber-400 font-bold text-xs uppercase">Prompt 1</span>
+                    <p class="text-sm font-medium mt-1">"Has Alex found a job in London yet?"</p>
+                    <p class="text-xs text-slate-400 mt-2">Expected response: "No, Alex hasn't found a job yet."</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+                    <span class="text-amber-400 font-bold text-xs uppercase">Prompt 2</span>
+                    <p class="text-sm font-medium mt-1">"How many museums has Alex visited?"</p>
+                    <p class="text-xs text-slate-400 mt-2">Expected response: "Alex has visited three museums."</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+                    <span class="text-amber-400 font-bold text-xs uppercase">Prompt 3</span>
+                    <p class="text-sm font-medium mt-1">"What questions has Alex asked their parents?"</p>
+                    <p class="text-xs text-slate-400 mt-2">Expected response: "Have you received the photos? / Has Dad fixed his car?"</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+                    <span class="text-amber-400 font-bold text-xs uppercase">Prompt 4 (Personalization)</span>
+                    <p class="text-sm font-medium mt-1">"Have you ever written a letter or email to your parents?"</p>
+                    <p class="text-xs text-slate-400 mt-2">Expected response: "Yes, I have written..." / "No, I haven't written..."</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // 1. FLASHCARDS DATA & GENERATION
+        const vocabData = [
+            { word: "Apartment", emoji: "🏢", def: "A set of rooms for living in a building.", ex: "I live in a small apartment." },
+            { word: "Roommate", emoji: "🤝", def: "A person you share an apartment or room with.", ex: "My roommate is very quiet." },
+            { word: "Neighborhood", emoji: "🏡", def: "The area around your home.", ex: "There is a park in my neighborhood." },
+            { word: "Museum", emoji: "🏛️", def: "A place where interesting or old objects are shown.", ex: "We visited an art museum." },
+            { word: "Job Interview", emoji: "💼", def: "A meeting to talk about getting a job.", ex: "She had a job interview today." },
+            { word: "Missed", emoji: "💔", def: "Felt sad because someone is not with you.", ex: "I missed my family during vacation." }
+        ];
+
+        function renderFlashcards() {
+            const container = document.getElementById('flashcard-container');
+            container.innerHTML = vocabData.map((item, index) => `
+                <div class="perspective-1000 h-32 cursor-pointer" onclick="flipCard(${index})">
+                    <div id="card-${index}" class="transform-style-3d relative w-full h-full duration-500 rounded-xl shadow-sm border border-slate-200 bg-white">
+                        <!-- Front -->
+                        <div class="absolute inset-0 backface-hidden p-3 flex flex-col items-center justify-center text-center">
+                            <span class="text-2xl mb-1">${item.emoji}</span>
+                            <span class="font-bold text-xs text-slate-800">${item.word}</span>
+                            <span class="text-[10px] text-slate-400 mt-1">Click to reveal</span>
+                        </div>
+                        <!-- Back -->
+                        <div class="absolute inset-0 backface-hidden rotate-y-180 p-2.5 bg-indigo-50 border border-indigo-200 rounded-xl flex flex-col justify-center text-center">
+                            <p class="text-[11px] font-semibold text-indigo-900">${item.def}</p>
+                            <p class="text-[10px] text-indigo-700 italic mt-1">"${item.ex}"</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function flipCard(index) {
+            const card = document.getElementById(`card-${index}`);
+            card.classList.toggle('flipped');
+        }
+
+        // 2. GRAMMAR HIGHLIGHTING TOGGLES
+        let activeHighlights = {
+            aff: false,
+            neg: false,
+            int: false,
+            participle: false
+        };
+
+        function toggleGrammar(type) {
+            activeHighlights[type] = !activeHighlights[type];
+            updateGrammarUI();
+        }
+
+        function clearGrammar() {
+            activeHighlights = { aff: false, neg: false, int: false, participle: false };
+            updateGrammarUI();
+        }
+
+        function updateGrammarUI() {
+            // Highlight classes application
+            document.querySelectorAll('.grammar.aff').forEach(el => {
+                el.classList.toggle('highlight-aff', activeHighlights.aff);
+            });
+            document.querySelectorAll('.grammar.neg').forEach(el => {
+                el.classList.toggle('highlight-neg', activeHighlights.neg);
+            });
+            document.querySelectorAll('.grammar.int').forEach(el => {
+                el.classList.toggle('highlight-int', activeHighlights.int);
+            });
+            document.querySelectorAll('.participle').forEach(el => {
+                el.classList.toggle('highlight-participle', activeHighlights.participle);
+            });
+
+            // Button Active State styling
+            const btnMap = {
+                aff: { id: 'btn-aff', activeClass: 'bg-emerald-600', textClass: 'text-white' },
+                neg: { id: 'btn-neg', activeClass: 'bg-rose-600', textClass: 'text-white' },
+                int: { id: 'btn-int', activeClass: 'bg-sky-600', textClass: 'text-white' },
+                participle: { id: 'btn-participle', activeClass: 'bg-purple-600', textClass: 'text-white' }
+            };
+
+            Object.keys(btnMap).forEach(key => {
+                const btn = document.getElementById(btnMap[key].id);
+                if (activeHighlights[key]) {
+                    btn.classList.add(btnMap[key].activeClass, btnMap[key].textClass);
+                } else {
+                    btn.classList.remove(btnMap[key].activeClass, btnMap[key].textClass);
+                }
+            });
+        }
+
+        // 3. QUIZ CHECKING SYSTEM
+        function checkQuizAnswers() {
+            let score = 0;
+            const total = 5;
+
+            // Q1
+            const q1Val = document.querySelector('input[name="q1"]:checked')?.value;
+            const q1Card = document.getElementById('q1-card');
+            const q1Fb = q1Card.querySelector('.feedback');
+            q1Fb.classList.remove('hidden', 'text-emerald-600', 'text-rose-600');
+            if (q1Val === 'b') {
+                score++;
+                q1Card.className = "quiz-card bg-emerald-50/50 p-4 rounded-xl border border-emerald-300";
+                q1Fb.textContent = "Correct! Alex has lived in London for two weeks.";
+                q1Fb.classList.add('text-emerald-600');
+            } else {
+                q1Card.className = "quiz-card bg-rose-50/50 p-4 rounded-xl border border-rose-300";
+                q1Fb.textContent = "Incorrect. Alex says: 'I have lived here for two weeks now.'";
+                q1Fb.classList.add('text-rose-600');
+            }
+
+            // Q2
+            const q2Val = document.querySelector('input[name="q2"]:checked')?.value;
+            const q2Card = document.getElementById('q2-card');
+            const q2Fb = q2Card.querySelector('.feedback');
+            q2Fb.classList.remove('hidden', 'text-emerald-600', 'text-rose-600');
+            if (q2Val === 'c') {
+                score++;
+                q2Card.className = "quiz-card bg-emerald-50/50 p-4 rounded-xl border border-emerald-300";
+                q2Fb.textContent = "Correct! 'Haven't bought' is a negative Present Perfect form.";
+                q2Fb.classList.add('text-emerald-600');
+            } else {
+                q2Card.className = "quiz-card bg-rose-50/50 p-4 rounded-xl border border-rose-300";
+                q2Fb.textContent = "Incorrect. Option C contains the negative form 'haven't'.";
+                q2Fb.classList.add('text-rose-600');
+            }
+
+            // Q3
+            const q3Val = document.querySelector('input[name="q3"]:checked')?.value;
+            const q3Card = document.getElementById('q3-card');
+            const q3Fb = q3Card.querySelector('.feedback');
+            q3Fb.classList.remove('hidden', 'text-emerald-600', 'text-rose-600');
+            if (q3Val === 'a') {
+                score++;
+                q3Card.className = "quiz-card bg-emerald-50/50 p-4 rounded-xl border border-emerald-300";
+                q3Fb.textContent = "Correct! Alex asks: 'Have you received the photos?'";
+                q3Fb.classList.add('text-emerald-600');
+            } else {
+                q3Card.className = "quiz-card bg-rose-50/50 p-4 rounded-xl border border-rose-300";
+                q3Fb.textContent = "Incorrect. Check the last paragraph of the letter again.";
+                q3Fb.classList.add('text-rose-600');
+            }
+
+            // Q4
+            const q4Val = document.getElementById('q4-input').value.trim().toLowerCase();
+            const q4Card = document.getElementById('q4-card');
+            const q4Fb = q4Card.querySelector('.feedback');
+            q4Fb.classList.remove('hidden', 'text-emerald-600', 'text-rose-600');
+            if (q4Val === 'visited') {
+                score++;
+                q4Card.className = "quiz-card bg-emerald-50/50 p-4 rounded-xl border border-emerald-300";
+                q4Fb.textContent = "Correct! The past participle of 'visit' is 'visited'.";
+                q4Fb.classList.add('text-emerald-600');
+            } else {
+                q4Card.className = "quiz-card bg-rose-50/50 p-4 rounded-xl border border-rose-300";
+                q4Fb.textContent = "Incorrect. The answer is 'visited'.";
+                q4Fb.classList.add('text-rose-600');
+            }
+
+            // Q5
+            const q5Val = document.getElementById('q5-input').value.trim().toLowerCase();
+            const q5Card = document.getElementById('q5-card');
+            const q5Fb = q5Card.querySelector('.feedback');
+            q5Fb.classList.remove('hidden', 'text-emerald-600', 'text-rose-600');
+            if (q5Val === 'found') {
+                score++;
+                q5Card.className = "quiz-card bg-emerald-50/50 p-4 rounded-xl border border-emerald-300";
+                q5Fb.textContent = "Correct! The irregular past participle of 'find' is 'found'.";
+                q5Fb.classList.add('text-emerald-600');
+            } else {
+                q5Card.className = "quiz-card bg-rose-50/50 p-4 rounded-xl border border-rose-300";
+                q5Fb.textContent = "Incorrect. The answer is 'found'.";
+                q5Fb.classList.add('text-rose-600');
+            }
+
+            // Display Score
+            const scoreDisplay = document.getElementById('score-display');
+            scoreDisplay.classList.remove('hidden');
+            scoreDisplay.textContent = `Score: ${score} / ${total}`;
+        }
+
+        // Initialize Page Features
+        window.onload = function() {
+            renderFlashcards();
+        };
+    </script>
+</body>
+</html>
